@@ -6,8 +6,9 @@
 
 *{
   font-family: "Work Sans", sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  text-align: center;
 } 
 .container{
   width: 75%;
@@ -126,7 +127,7 @@ font-weight: 700;
  .features{
   margin-top: 7rem;
   display: flex;
-  align-items: center;
+  align-items: start;
  gap: 8rem;
  }
  .features-content div,.features-content>p{
@@ -147,6 +148,7 @@ box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
  }
   .features img{
     width: 100%;
+    margin-left: 70px;
   }
 .features-img .ten-years-badge {
 border-radius: 8px;
@@ -155,13 +157,16 @@ color: #FFF;
 padding: 3rem;
 max-width: 250px;
 text-align: center;
-  }
+position: relative;
+bottom: 6rem;
+}
 
- .features-img .ten-years-badge h3 {
+ .features-img .ten-years-badge h3{
     font-weight: 700;
     font-size: 4rem;
   }
-  
+
+
  /* facts related style  */
 
  .facts{
@@ -193,19 +198,26 @@ text-align: center;
   align-items: center;
   gap: 7rem;
  }
- 
-
+ /* footer related style  */
+.footer{
+  margin-top: 130px;
+  margin-bottom: 30px;
+  text-align: center;
+  border-radius: 8px;
+background: #FFF4E7;
+padding: 2.25rem 7rem;
+}
 
 /* style for responsive  */
 
 /* for mobile device */
 @media screen and (max-width: 576px) {
+
   nav,
-  .teams,.facts .facts-card, .sponsors-img
+  .teams,.facts .facts-card, .sponsors-img,.features
   {
     flex-direction: column;
   }
-
 
  .teams .teams-img{
   grid-template-columns: repeat(1,1fr);
@@ -215,9 +227,21 @@ text-align: center;
   margin-top: 1.5rem;
  }
 
- .facts .facts-card .card{ 
-  margin-top:30px ;
-}
+ .features-img .ten-years-badge h3{
+  font-size: 100%;
+ }
+  .features-img,.features-content{
+    width: 100%;
+  }
+   .features img{
+    width: 100%;
+    margin-left: 0px;
+  }
+
+ .features-img,.features-content{
+    width: 100%;
+  }
+
 
 
 }
@@ -225,9 +249,13 @@ text-align: center;
 /* style for medium devices */
 @media screen and (min-width :576px) and (max-width: 992px) {
   nav,
-  .teams,.sponsors-img
+  .teams,.sponsors-img,.features
   {
     flex-direction: column;
+  }
+   .features-img,.features-content{
+    width: 100%;
+    margin: 0;
   }
   .teams .teams-content{
   margin-top: 1.5rem;
